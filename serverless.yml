@@ -1,0 +1,42 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: aws-passthrough
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  iamManagedPolicies:
+    - arn:aws:iam:*****:policy/AdministratorAccess
+
+functions:
+  invoker:
+    handler: handler.invoker
+    name: invoker
+    events:
+      - http:
+          path: invoker/get
+          method: get
+          cors: true
+
+# CloudFormation resource templates
+resources:
+
+  # Cognito
+    - ${file(resources/cognito-user-pool.yml)}
+    - ${file(resources/cognito-identity-pool.yml)}
+

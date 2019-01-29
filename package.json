@@ -1,0 +1,34 @@
+{
+  "name": "aws-passthrough-tibet",
+  "version": "0.0.1",
+  "description": "An AWS Passthrough utility for use with TIBET.",
+  "keywords": [ "TIBET", "AWS" ],
+  "homepage": "http://www.technicalpursuit.com",
+  "author": {
+    "name": "Technical Pursuit Inc.",
+    "email": "tibet@technicalpursuit.com",
+    "url": "http://www.technicalpursuit.com"
+  },
+  "contributors": [
+    {
+      "name": "Scott Shattuck",
+      "email": "ss@technicalpursuit.com"
+    },
+    {
+      "name": "William J. Edney",
+      "email": "bedney@technicalpursuit.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/TechnicalPursuit/aws-passthrough-tibet"
+  },
+  "bugs": {
+    "url": "http://github.com/TechnicalPursuit/aws-passthrough-tibet/issues",
+    "email": "tibet@technicalpursuit.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
