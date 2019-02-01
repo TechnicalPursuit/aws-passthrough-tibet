@@ -22,6 +22,7 @@ functions:
   passthrough:
     handler: handler.passthrough
     name: passthrough
+    role: PassthroughRole
     events:
       - http:
           path: passthrough/get
@@ -30,6 +31,32 @@ functions:
 
 # CloudFormation resource templates
 resources:
+
+  - Resources:
+
+      # IAM role used for the passthrough function
+      PassthroughRole:
+        Type: AWS::IAM::Role
+        Properties:
+          AssumeRolePolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: 'Allow'
+              Principal:
+                Service: 'lambda.amazonaws.com'
+              Action:
+                - 'sts:AssumeRole'
+            - Effect: 'Allow'
+              Principal:
+                Federated: 'cognito-identity.amazonaws.com'
+              Action:
+                - 'sts:AssumeRoleWithWebIdentity'
+              Condition:
+                StringEquals:
+                  'cognito-identity.amazonaws.com:aud':
+                    Ref: CognitoIdentityPool
+                'ForAnyValue:StringLike':
+                  'cognito-identity.amazonaws.com:amr': authenticated
 
   # Cognito
   - ${file(resources/cognito-user-pool.yml)}
