@@ -82,17 +82,18 @@ This will output 3 values:
 #### Using the 'user pool client' (also called 'app') ID that was logged out, set up a user:
 
 ```sh
-$ aws cognito-idp sign-up \
+aws cognito-idp sign-up \
   --region <<your_cognito_region>> \
   --client-id <<your_user_pool_client_id>> \
   --username admin@example.com \
   --password Passw0rd!
+  --user-attributes Name=email,Value=admin@example.com
 ```
 
 #### Verify the user using the 'user pool ID' (NOT 'user pool client ID'):
 
 ```sh
-$ aws cognito-idp admin-confirm-sign-up \
+aws cognito-idp admin-confirm-sign-up \
   --region <<your_cognito_region>> \
   --user-pool-id <<your_user_pool_id>> \
   --username admin@example.com
