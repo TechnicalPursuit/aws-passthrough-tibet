@@ -19,12 +19,12 @@ custom:
   stage: ${opt:stage, self:provider.stage}
 
 functions:
-  invoker:
-    handler: handler.invoker
-    name: invoker
+  passthrough:
+    handler: handler.passthrough
+    name: passthrough
     events:
       - http:
-          path: invoker/get
+          path: passthrough/get
           method: get
           cors: true
 

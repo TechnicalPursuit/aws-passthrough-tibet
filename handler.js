@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.invoker = async (event, context, callback) => {
+module.exports.passthrough = async (event, context, callback) => {
 
     var AWS,
         commonHeaders,
