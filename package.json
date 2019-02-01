@@ -2,7 +2,10 @@
   "name": "aws-passthrough-tibet",
   "version": "0.0.1",
   "description": "An AWS Passthrough utility for use with TIBET.",
-  "keywords": [ "TIBET", "AWS" ],
+  "keywords": [
+    "TIBET",
+    "AWS"
+  ],
   "homepage": "http://www.technicalpursuit.com",
   "author": {
     "name": "Technical Pursuit Inc.",
