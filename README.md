@@ -67,8 +67,10 @@ export AWS_PROFILE="development"
 
 #### Deploy the TIBET AWS Passthrough configuration and code into AWS:
 
+Note that the `--verbose` setting here is required to see output values that you will need below to properly configure your TIBET application.
+
 ```sh
-serverless deploy --stage test
+serverless deploy --stage test --verbose
 ```
 
 This will output 3 values:
