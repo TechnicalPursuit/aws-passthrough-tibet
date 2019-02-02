@@ -53,6 +53,7 @@ Resources:
                   - 'mobileanalytics:PutEvents'
                   - 'cognito-sync:*'
                   - 'cognito-identity:*'
+                  - 'lambda:*'
                 Resource: '*'
 
               # Allow users to invoke our API
