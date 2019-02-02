@@ -152,6 +152,9 @@ they have defaults:
 
 #### Use the Sherpa Inspector to navigate to the Amazon remote service
 
-#### Log in using the user **that you added to the user pool above**.
+1. Go into the Sherpa Inspector
+2. Click `REST` > `AWS` > `S3`
+3. Log in using the user **that you added to the user pool above** using the AWS
+   CLI tools.
 
 #### Browse to your resources.
