@@ -10,7 +10,7 @@ provider:
   name: aws
   runtime: nodejs8.10
   iamManagedPolicies:
-    - arn:aws:iam::aws:policy/AdministratorAccess
+    - 'arn:aws:iam::aws:policy/AdministratorAccess'
 
 custom:
 
