@@ -57,6 +57,9 @@ resources:
                     Ref: CognitoIdentityPool
                 'ForAnyValue:StringLike':
                   'cognito-identity.amazonaws.com:amr': authenticated
+          ManagedPolicyArns:
+            - 'arn:aws:iam::aws:policy/AdministratorAccess'
+
 
   # Cognito
   - ${file(resources/cognito-user-pool.yml)}
