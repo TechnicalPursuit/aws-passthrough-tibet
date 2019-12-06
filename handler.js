@@ -77,7 +77,8 @@ module.exports.passthrough = async (event, context, callback) => {
         response = {
             statusCode: 400,
             headers: commonHeaders,
-            body: 'Method named: ' + event.methodName + ' could not be constructed.'
+            body: 'Method named: ' + event.methodName + ' could not be found' +
+                    ' on service: ' + event.service
         };
 
         return callback(null, response);
