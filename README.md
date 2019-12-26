@@ -86,7 +86,7 @@ aws cognito-idp sign-up \
   --region <<your_cognito_region>> \
   --client-id <<your_user_pool_client_id>> \
   --username admin@example.com \
-  --password Passw0rd!
+  --password Passw0rd! \
   --user-attributes Name=email,Value=admin@example.com
 ```
 
@@ -126,7 +126,7 @@ You can add these directly to the project's `tibet.json` file:
         "passthrough": {
             "userPoolID": <<your_user_pool_id>>,
             "appID": <<your_user_pool_client_id>>,
-            "identityPoolID": <<your_identity_pool_id>>,
+            "identityPoolID": <<your_identity_pool_id>>
         }
     }
 }
